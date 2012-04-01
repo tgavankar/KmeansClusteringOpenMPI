@@ -26,45 +26,61 @@ class Cluster:
         self.points = []
 
     def calcCentroid(self):
-        return [sum([p[i] for p in self.points], 0.0) / float(len(self.points)) for i in range(len(self.points[0]))]
+        if isinstance(points[0][0], float) or isinstance(points[0][0], int):
+            return [sum([p[i] for p in self.points], 0.0) / float(len(self.points)) for i in range(len(self.points[0]))]
+        #######
+        # CODE TO GET CENTROID OF DNA GOES HERE
+        # points = [['a', 'g', 'a'], ['c', 'g', 'a'], ['c', 't', 'a']]
+        ######
+        # Issue with below: lst should = argument of set()
+        #return [max(set([p[i] for p in self.points]), key=lst.count) for i in range(len(self.points[0]))]
 
 def usage():
     print '$> python sequential.py <required args>\n' + \
+        '\t-t <type>\t\tType of input data ("plot" or "dna")\n' + \
         '\t-k <#>\t\tNumber of clusters\n' + \
         '\t-u <#>\t\tNumber of K-means iterations\n' + \
         '\t-i <file>\tFilename for the raw data\n'
 
 def handleArgs(args):
+    type = "plot"
     k = 2
     u = 0.0001
     input = None
 
     try:
-        optlist, args = getopt.getopt(args[1:], 'k:u:i:')
+        optlist, args = getopt.getopt(args[1:], 't:k:u:i:')
     except getopt.GetoptError, err:
         print str(err)
         usage()
         sys.exit(2)
 
     for key, val in optlist:
-        if   key == '-c':
-            numClusters = int(val)
+        if key == '-t':
+            if val != "plot" and val != "dna":
+                usage()
+                sys.exit(2)
+            type = val
+        elif key == '-k':
+            k = int(val)
         elif key == '-u':
             u = float(val)
         elif key == '-i':
             input = val
 
-    return (k, u, input)
+    return (type, k, u, input)
 
 def main():
-    (k, u, fp) = handleArgs(sys.argv)
-
-    distance = euclideanDistance
-
+    (type, k, u, fp) = handleArgs(sys.argv)
     f = open(fp, "r")
 
-    points = [[float(x) for x in i.split(",")] for i in f]
-
+    if type == "dna":
+        distance = hammingDistance
+        points = [list(i.strip()) for i in f]
+    else:
+        distance = euclideanDistance
+        points = [[float(x) for x in i.split(",")] for i in f]
+    
     # Fully random points
     #points = [[random.uniform(0, 50), random.uniform(0, 50)] for i in range(20)]
 
