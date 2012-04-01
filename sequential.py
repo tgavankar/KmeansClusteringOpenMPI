@@ -7,7 +7,7 @@ import sys
 def euclideanDistance(p, q):
     return math.sqrt(sum([(q[i]-p[i])**2 for i in range(len(p))]))
 
-def hammingDistance(p, q):
+def hammingDistance(s1, s2):
     count = 0
     for i in range(0, len(s1)):
         if s1[i] is not s2[i]:
@@ -33,8 +33,65 @@ class Cluster:
         # CODE TO GET CENTROID OF DNA GOES HERE
         # points = [['a', 'g', 'a'], ['c', 'g', 'a'], ['c', 't', 'a']]
         ######
-        # Issue with below: lst should = argument of set()
-        #return [max(set([p[i] for p in self.points]), key=lst.count) for i in range(len(self.points[0]))]
+        centroid = []
+        randIndex = []
+        countPicked = [0 for x in range(len(self.points))]
+        for i in range(len(self.points[0])):
+            aCount = 0
+            tCount = 0
+            gCount = 0
+            cCount = 0
+            picked = 'r'
+            for j in range(len(self.points)):
+                if self.points[j][i] == 'a':
+                    aCount+=1;
+                elif self.points[j][i] == 'g':
+                    gCount+=1;
+                elif self.points[j][i] == 'c':
+                    cCount+=1;
+                elif self.points[j][i] == 't':
+                    tCount+=1;
+            if aCount > gCount and aCount > cCount and aCount > tCount:
+                centroid.append('a')
+                picked = 'a'
+            elif gCount > aCount and gCount > tCount and gCount > cCount:
+                centroid.append('g')
+                picked = 'g'
+            elif cCount > aCount and cCount > gCount and cCount > tCount:
+                centroid.append('c')
+                picked = 'c'
+            elif tCount > aCount and tCount > gCount and tCount > cCount:
+                centroid.append('t')
+                picked = 't'
+            else:
+                centroid.append('r')
+                maxVal = max([aCount,gCount,tCount,cCount])
+                tied = []
+                if aCount == maxVal:
+                    tied.append('a')
+                if cCount == maxVal:
+                    tied.append('c')
+                if gCount == maxVal:
+                    tied.append('g')
+                if tCount == maxVal:
+                    tied.append('t')
+                randIndex.append({'index':i,'vals':tied})
+            for j in range(len(self.points)):
+                if self.points[j][i] == picked:
+                    countPicked[j]+=1;
+
+        for x in randIndex:
+            tiedIndex = []
+            for j in range(len(self.points)):
+                for nuec in x['vals']:
+                    if self.points[j][x['index']] == nuec:
+                        tiedIndex.append(j)
+            min = 0
+            for i in tiedIndex:
+                if countPicked[i] < min:
+                    min = countPicked[i]
+            centroid[x['index']] = self.points[min][x['index']]
+        return centroid
 
 def usage():
     print '$> python sequential.py <required args>\n' + \
@@ -114,17 +171,16 @@ def main():
     if type == "dna":
         distance = hammingDistance
         points = [list(i.strip()) for i in f]
+        clusters = [Cluster([c]) for c in random.sample(points, k)]
     else:
         distance = euclideanDistance
         points = [[float(x) for x in i.split(",")] for i in f]
+        numPoints = len(points)
+        clusters = [Cluster([c]) for c in select(points, [i*(numPoints/k)+numPoints/(2*k) for i in range(0, k)])]
+
     
     # Fully random points
     #points = [[random.uniform(0, 50), random.uniform(0, 50)] for i in range(20)]
-
-    numPoints = len(points)
-    clusters = [Cluster([c]) for c in select(points, [i*(numPoints/k)+numPoints/(2*k) for i in range(0, k)])]
- 
-    #clusters = [Cluster([c]) for c in random.sample(points, k)]
 
     while True:
         oldC = []
@@ -149,7 +205,7 @@ def main():
         print "Centroid: %s" % c.centroid
         print "Points:"
         for p in c.points:
-            print "%s\t%s" % (p[0], p[1])
+            print "%s: %s" % (''.join(p), hammingDistance(p, c.centroid))
         
 
 if __name__ == "__main__": 
