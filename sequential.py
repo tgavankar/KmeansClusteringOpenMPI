@@ -79,18 +79,19 @@ class Cluster:
             for j in range(len(self.points)):
                 if self.points[j][i] == picked:
                     countPicked[j]+=1;
-
         for x in randIndex:
             tiedIndex = []
             for j in range(len(self.points)):
                 for nuec in x['vals']:
                     if self.points[j][x['index']] == nuec:
                         tiedIndex.append(j)
-            min = 0
+            min = countPicked[tiedIndex[0]]
+            minindex = 0
             for i in tiedIndex:
                 if countPicked[i] < min:
                     min = countPicked[i]
-            centroid[x['index']] = self.points[min][x['index']]
+                    minindex = i
+            centroid[x['index']] = self.points[minindex][x['index']]
         return centroid
 
 def usage():
