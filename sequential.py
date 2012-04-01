@@ -172,17 +172,13 @@ def main():
     if type == "dna":
         distance = hammingDistance
         points = [list(i.strip()) for i in f]
-        clusters = [Cluster([c]) for c in random.sample(points, k)]
     else:
         distance = euclideanDistance
         points = [[float(x) for x in i.split(",")] for i in f]
-        numPoints = len(points)
-        clusters = [Cluster([c]) for c in select(points, [i*(numPoints/k)+numPoints/(2*k) for i in range(0, k)])]
-
     
-    # Fully random points
-    #points = [[random.uniform(0, 50), random.uniform(0, 50)] for i in range(20)]
-
+    numPoints = len(points)
+    clusters = [Cluster([c]) for c in select(points, [i*(numPoints/k)+numPoints/(2*k) for i in range(0, k)])]
+    
     while True:
         oldC = []
         for c in clusters:
