@@ -1,5 +1,4 @@
 import getopt
-from heapq import nlargest
 import math
 import random
 import sys
