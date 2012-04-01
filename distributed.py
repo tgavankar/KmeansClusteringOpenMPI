@@ -3,6 +3,8 @@ import math
 import random
 import sys
 
+from mpi4py import MPI
+
 def euclideanDistance(p, q):
     return math.sqrt(sum([(q[i]-p[i])**2 for i in range(len(p))]))
 
@@ -164,6 +166,15 @@ def select(data, positions, start=0, end=None):
         result.extend(select(data, over_positions, pivot_i+1, end))
     return result
 
+
+def chunks(lst, n, withStarts=False):
+    # http://stackoverflow.com/questions/2659900/python-slicing-a-list-into-n-nearly-equal-length-partitions
+    division = len(lst) / float(n)
+    out = [lst[int(round(division * i)): int(round(division * (i + 1)))] for i in xrange(n)]
+    if withStarts:
+        out = (out, [int(round(division * i)) for i in xrange(n)])
+    return out
+
 def main():
     (type, k, u, fp) = handleArgs(sys.argv)
     f = open(fp, "r")
@@ -178,34 +189,81 @@ def main():
     numPoints = len(points)
     clusters = [Cluster([c]) for c in select(points, [i*(numPoints/k)+numPoints/(2*k) for i in range(0, k)])]
     
+    # MPI.Init()
+
+    comm = MPI.COMM_WORLD
+
+    myrank = comm.Get_rank()
+    nprocs = comm.Get_size()
+
     while True:
         oldC = []
-        for c in clusters:
-            oldC.append(c.centroid)
-            c.clear()    
+        if myrank == 0:
+            for c in clusters:
+                oldC.append(c.centroid)
+                c.clear()    
 
-        for p in points:
+        clusters = comm.bcast(clusters, root=0)
+
+        data = comm.scatter(chunks(points, nprocs), root=0)
+
+        reply = {}
+
+        for p in data:
             minDist = float("inf")
-            for c in clusters:        
+            for i in range(len(clusters)):
+                c = clusters[i]
                 dist = distance(p, c.centroid)
                 if dist < minDist:
                     minDist = dist
-                    minClus = c
-            minClus.add(p)
+                    minClusI = i
+            reply.setdefault(minClusI, []).append(p)
 
-        if max([distance(oldC[i], clusters[i].centroid) for i in range(0, len(clusters))]) < u:
-            break
+        reply = comm.gather(reply, root=0)
 
+        if myrank == 0:
+            #  MAY CONTAIN DUPLICATES IN x.get(i, [])+y.get(i, [])
+            toAdd = reduce(lambda x, y: dict((i, x.get(i, [])+y.get(i, [])) for i in set(x.keys()+y.keys())), reply)
+        else:
+            toAdd = {}
 
-    for c in clusters:
-        print "Centroid: %s" % c.centroid
-        print "Points:"
-        for p in c.points:
-            if type == "dna":
-                print "%s: %s" % (''.join(p), hammingDistance(p, c.centroid))
-            else:
-                print "%s\t%s" % (p[0], [1])
+        toAdd = comm.bcast(toAdd, root=0)
+
+        (splitClusters, indexes) = chunks(clusters, nprocs, True)
+
+        clusData = comm.scatter(splitClusters, root=0)
+        indexes = comm.bcast(indexes, root=0)
+
+        startIndex = indexes[myrank]
+
+        for i in range(len(clusData)):
+            clusData[i].clear()
+            [clusData[i].add(p) for p in toAdd.get(startIndex+i, [])]
+
+        gatheredClus = comm.gather(clusData, root=0)
+
+        endReached = False
         
+        if myrank == 0:
+            clusters = reduce(lambda x, y: x+y, gatheredClus)
+            if max([distance(oldC[i], clusters[i].centroid) for i in range(0, len(clusters))]) < u:
+                endReached = True
+
+        breakOut = comm.bcast(endReached, root=0)
+
+        if breakOut:
+            break
+    
+    if myrank == 0:
+        for c in clusters:
+            print "Centroid: %s" % c.centroid
+            print "Points:"
+            for p in c.points:
+                if type == "dna":
+                    print "%s: %s" % (''.join(p), hammingDistance(p, c.centroid))
+                else:
+                    print "%s\t%s" % (p[0], p[1])
+         
 
 if __name__ == "__main__": 
     main()
