@@ -1,3 +1,4 @@
+import csv
 import getopt
 import math
 import random
@@ -98,16 +99,18 @@ def usage():
         '\t-t <type>\t\tType of input data ("plot" or "dna")\n' + \
         '\t-k <#>\t\tNumber of clusters\n' + \
         '\t-u <#>\t\tNumber of K-means iterations\n' + \
-        '\t-i <file>\tFilename for the raw data\n'
+        '\t-i <file>\tInput filename for the raw data\n' + \
+        '\t-o <file>\tOutput filename\n'
 
 def handleArgs(args):
     type = "plot"
     k = 2
     u = 0.0001
     input = None
+    output = None
 
     try:
-        optlist, args = getopt.getopt(args[1:], 't:k:u:i:')
+        optlist, args = getopt.getopt(args[1:], 't:k:u:i:o:')
     except getopt.GetoptError, err:
         print str(err)
         usage()
@@ -125,8 +128,10 @@ def handleArgs(args):
             u = float(val)
         elif key == '-i':
             input = val
+        elif key == '-o':
+            output = val
 
-    return (type, k, u, input)
+    return (type, k, u, input, output)
 
 def select(data, positions, start=0, end=None):
     '''For every n in *positions* find nth rank ordered element in *data*
@@ -165,8 +170,8 @@ def select(data, positions, start=0, end=None):
     return result
 
 def main():
-    (type, k, u, fp) = handleArgs(sys.argv)
-    f = open(fp, "r")
+    (type, k, u, infile, outfile) = handleArgs(sys.argv)
+    f = open(infile, "r")
 
     if type == "dna":
         distance = hammingDistance
@@ -196,15 +201,18 @@ def main():
         if max([distance(oldC[i], clusters[i].centroid) for i in range(0, len(clusters))]) < u:
             break
 
+    writer = csv.writer(open(outfile, "w"))
 
     for c in clusters:
         print "Centroid: %s" % c.centroid
-        print "Points:"
+        writer.writerow(["Centroid"] + c.centroid)
         for p in c.points:
             if type == "dna":
                 print "%s: %s" % (''.join(p), hammingDistance(p, c.centroid))
+                writer.writerow([''.join(p)])
             else:
                 print "%s\t%s" % (p[0], [1])
+                writer.writerow(p)
         
 
 if __name__ == "__main__": 
