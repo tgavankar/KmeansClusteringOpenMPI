@@ -99,6 +99,7 @@ class Cluster:
                     min = countPicked[i]
                     minindex = i
             centroid[x['index']] = self.points[minindex][x['index']]
+        self.centroid = centroid
         return centroid
 
 def usage():
@@ -170,6 +171,32 @@ def quickSelect(data, n):
             data = over
             n -= len(under) + pcount
 
+def kmeanpp(X, k, distance):
+    """Perform K-Mean++ initial centroid selection"""
+    # Souce: http://yongsun.me/2008/10/k-means-and-k-means-with-python/
+    ntries = int (2 + math.log(k))
+    n = len(X)
+    centers = [X[random.randint(0, n)]]
+    D       = [distance(x,centers[0])**2 for x in X]
+    Dsum    = reduce (lambda x,y:x+y, D)
+    for _ in range(k-1):
+        bestDsum = bestIdx = -1
+        for _ in range(ntries):
+            randVal = random.random() * Dsum
+            for i in range(n):
+                if randVal <= D[i]:
+                    break
+                else:
+                    randVal -= D[i]
+            tmpDsum = reduce(lambda x,y:x+y,
+                             (min(D[j], distance(X[j], X[i])**2) for j in xrange(n)))
+            if bestDsum < 0 or tmpDsum < bestDsum:
+                bestDsum, bestIdx  = tmpDsum, i
+        Dsum = bestDsum
+        centers.append (X[bestIdx])
+        D = [min(D[i], distance(X[i], X[bestIdx])**2) for i in xrange(n)]
+    return centers
+
 def chunks(lst, n, withStarts=False):
     # http://stackoverflow.com/questions/2659900/python-slicing-a-list-into-n-nearly-equal-length-partitions
     division = len(lst) / float(n)
@@ -191,26 +218,31 @@ def main():
     if type == "dna":
         distance = hammingDistance
         points = [list(i.strip()) for i in f]
+        
+        numPoints = len(points)
+
+        selectPoints = comm.scatter(chunks([i*(numPoints/k)+numPoints/(2*k) for i in xrange(k)], nprocs), root=0)
+
+        if len(selectPoints) > 0:
+            selectedPoints = [quickSelect(points, i) for i in selectPoints]
+        else:
+            selectedPoints = []
+    
+        gatheredPoints = comm.gather(selectedPoints, root=0) 
+
+        if myrank == 0:
+            flatSelectedPoints = reduce(lambda x, y: x+y, gatheredPoints)
+            clusters = [Cluster([c]) for c in flatSelectedPoints]
+        else:
+            clusters = []
     else:
         distance = euclideanDistance
         points = [[float(x) for x in i.split(",")] for i in f]
-    
-    numPoints = len(points)
-
-    selectPoints = comm.scatter(chunks([i*(numPoints/k)+numPoints/(2*k) for i in xrange(k)], nprocs), root=0)
-
-    if len(selectPoints) > 0:
-        selectedPoints = [quickSelect(points, i) for i in selectPoints]
-    else:
-        selectedPoints = []
-    
-    gatheredPoints = comm.gather(selectedPoints, root=0) 
-
-    if myrank == 0:
-        flatSelectedPoints = reduce(lambda x, y: x+y, gatheredPoints)
-        clusters = [Cluster([c]) for c in flatSelectedPoints]
-    else:
-        clusters = []
+        numPoints = len(points)
+        if myrank == 0:
+            clusters = [Cluster([c]) for c in kmeanpp(points, k, distance)]
+        else:
+            clusters = []
     
     while True:
         oldC = []
@@ -224,7 +256,6 @@ def main():
         data = comm.scatter(chunks(points, nprocs), root=0)
 
         reply = {}
-
         for p in data:
             minDist = float("inf")
             for i in range(len(clusters)):
@@ -238,7 +269,6 @@ def main():
         reply = comm.gather(reply, root=0)
 
         if myrank == 0:
-            #  MAY CONTAIN DUPLICATES IN x.get(i, [])+y.get(i, [])
             toAdd = reduce(lambda x, y: dict((i, x.get(i, [])+y.get(i, [])) for i in set(x.keys()+y.keys())), reply)
         else:
             toAdd = {}
@@ -290,12 +320,14 @@ def main():
             for p in c.points:
                 currappend(p2str(p, centroid))
     
-        csvTranspose = zip(*csvOutput)
     
-        for e in csvTranspose:
-            e1 = [list(i) for i in e]
+        maxClusterSize = max([len(c) for c in csvOutput])
+        for p in xrange(maxClusterSize):
+            e1 = [list(c[p]) if len(c) > p else [None, None] for c in csvOutput]
             writer.writerow(sum(e1, []))
  
 
 if __name__ == "__main__": 
-    main()
+    import cProfile
+    cProfile.run('main()')
+    #main()
