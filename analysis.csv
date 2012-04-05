@@ -1,120 +1,121 @@
-dnak,2,10,1,seq,0.006
-dnak,2,100,1,seq,0.013
-dnak,2,10000,1,seq,0.42
-dnak,2,10,2,mpi,0.02
-dnak,2,100,2,mpi,0.03
-dnak,2,10000,2,mpi,0.538
-dnak,2,10,4,mpi,0.007
-dnak,2,100,4,mpi,0.015
-dnak,2,10000,4,mpi,0.443
-dnak,2,10,8,mpi,0.009
-dnak,2,100,8,mpi,0.024
-dnak,2,10000,8,mpi,0.357
-dnak,2,10,12,mpi,0.013
-dnak,2,100,12,mpi,0.022
-dnak,2,10000,12,mpi,0.672
-dnak,4,10,1,seq,0.007
-dnak,4,100,1,seq,0.018
-dnak,4,10000,1,seq,1.132
-dnak,4,10,2,mpi,0.015
-dnak,4,100,2,mpi,0.033
-dnak,4,10000,2,mpi,1.244
-dnak,4,10,4,mpi,0.008
-dnak,4,100,4,mpi,0.018
-dnak,4,10000,4,mpi,2.099
-dnak,4,10,8,mpi,0.007
-dnak,4,100,8,mpi,0.027
-dnak,4,10000,8,mpi,1.198
-dnak,4,10,12,mpi,0.014
-dnak,4,100,12,mpi,0.022
-dnak,4,10000,12,mpi,4.629
-dnak,8,10,1,seq,0.012
-dnak,8,100,1,seq,0.134
-dnak,8,10000,1,seq,5.748
-dnak,8,10,2,mpi,0.021
-dnak,8,100,2,mpi,0.12
-dnak,8,10000,2,mpi,5.33
-dnak,8,10,4,mpi,0.011
-dnak,8,100,4,mpi,0.075
-dnak,8,10000,4,mpi,3.532
-dnak,8,10,8,mpi,0.022
-dnak,8,100,8,mpi,0.098
-dnak,8,10000,8,mpi,4.047
-dnak,8,10,12,mpi,0.019
-dnak,8,100,12,mpi,0.067
-dnak,8,10000,12,mpi,2.975
-dnak,12,1000,0,seq,11.336
-dnak,12,10,1,seq,0.03
-dnak,12,100,1,seq,0.176
-dnak,12,10,2,mpi,0.046
-dnak,12,100,2,mpi,0.492
-dnak,12,10000,2,mpi,10.976
-dnak,12,10,4,mpi,0.021
-dnak,12,100,4,mpi,0.084
-dnak,12,10000,4,mpi,6.485
-dnak,12,10,8,mpi,0.04
-dnak,12,100,8,mpi,0.104
-dnak,12,10000,8,mpi,7.454
-dnak,12,10,12,mpi,0.028
-dnak,12,100,12,mpi,0.065
-dnak,12,10000,12,mpi,4.328
-graphk,2,10,1,seq,0.007
-graphk,2,100,1,seq,0.013
-graphk,2,10000,1,seq,0.574
-graphk,2,10,2,mpi,0.026
-graphk,2,100,2,mpi,0.037
-graphk,2,10000,2,mpi,0.637
-graphk,2,10,4,mpi,0.006
-graphk,2,100,4,mpi,0.013
-graphk,2,10000,4,mpi,0.6
-graphk,2,10,8,mpi,0.007
-graphk,2,100,8,mpi,0.008
-graphk,2,10000,8,mpi,0.6
-graphk,2,10,12,mpi,0.019
-graphk,2,100,12,mpi,0.08
-graphk,2,10000,12,mpi,0.594
-graphk,4,10,1,seq,0.009
-graphk,4,100,1,seq,0.038
-graphk,4,10000,1,seq,2.955
-graphk,4,10,2,mpi,0.036
-graphk,4,100,2,mpi,0.045
-graphk,4,10000,2,mpi,3.02
-graphk,4,10,4,mpi,0
-graphk,4,100,4,mpi,0.036
-graphk,4,10000,4,mpi,2.847
-graphk,4,10,8,mpi,0.005
-graphk,4,100,8,mpi,0.04
-graphk,4,10000,8,mpi,2.945
-graphk,4,10,12,mpi,0.023
-graphk,4,100,12,mpi,0.033
-graphk,4,10000,12,mpi,3.8
-graphk,8,10,1,seq,0.021
-graphk,8,100,1,seq,0.164
-graphk,8,10000,1,seq,14.592
-graphk,8,10,2,mpi,0.02
-graphk,8,100,2,mpi,0.153
-graphk,8,10000,2,mpi,16.555
-graphk,8,10,4,mpi,0.022
-graphk,8,100,4,mpi,0.147
-graphk,8,10000,4,mpi,14.069
-graphk,8,10,8,mpi,0.024
-graphk,8,100,8,mpi,0.155
-graphk,8,10000,8,mpi,14.456
-graphk,8,10,12,mpi,0.021
-graphk,8,100,12,mpi,0.142
-graphk,8,10000,12,mpi,18.283
-graphk,12,10,1,seq,0.04
-graphk,12,100,1,seq,0.337
-graphk,12,10000,1,seq,33.681
-graphk,12,10,2,mpi,0.082
-graphk,12,100,2,mpi,0.317
-graphk,12,10000,2,mpi,32.746
-graphk,12,10,4,mpi,0.036
-graphk,12,100,4,mpi,0.384
-graphk,12,10000,4,mpi,32.7
-graphk,12,10,8,mpi,0.045
-graphk,12,100,8,mpi,0.355
-graphk,12,10000,8,mpi,34.688
-graphk,12,10,12,mpi,0.037
-graphk,12,100,12,mpi,0.306
-graphk,12,10000,12,mpi,34.425
+Data Type,k (clusters),Points per Cluster,Number of Processors,Implementation Type,Runtime (s)
+DNA,2,10,1,seq,0.006
+DNA,2,100,1,seq,0.013
+DNA,2,10000,1,seq,0.42
+DNA,2,10,2,mpi,0.02
+DNA,2,100,2,mpi,0.03
+DNA,2,10000,2,mpi,0.538
+DNA,2,10,4,mpi,0.007
+DNA,2,100,4,mpi,0.015
+DNA,2,10000,4,mpi,0.443
+DNA,2,10,8,mpi,0.009
+DNA,2,100,8,mpi,0.024
+DNA,2,10000,8,mpi,0.357
+DNA,2,10,12,mpi,0.013
+DNA,2,100,12,mpi,0.022
+DNA,2,10000,12,mpi,0.672
+DNA,4,10,1,seq,0.007
+DNA,4,100,1,seq,0.018
+DNA,4,10000,1,seq,1.132
+DNA,4,10,2,mpi,0.015
+DNA,4,100,2,mpi,0.033
+DNA,4,10000,2,mpi,1.244
+DNA,4,10,4,mpi,0.008
+DNA,4,100,4,mpi,0.018
+DNA,4,10000,4,mpi,2.099
+DNA,4,10,8,mpi,0.007
+DNA,4,100,8,mpi,0.027
+DNA,4,10000,8,mpi,1.198
+DNA,4,10,12,mpi,0.014
+DNA,4,100,12,mpi,0.022
+DNA,4,10000,12,mpi,4.629
+DNA,8,10,1,seq,0.012
+DNA,8,100,1,seq,0.134
+DNA,8,10000,1,seq,5.748
+DNA,8,10,2,mpi,0.021
+DNA,8,100,2,mpi,0.12
+DNA,8,10000,2,mpi,5.33
+DNA,8,10,4,mpi,0.011
+DNA,8,100,4,mpi,0.075
+DNA,8,10000,4,mpi,3.532
+DNA,8,10,8,mpi,0.022
+DNA,8,100,8,mpi,0.098
+DNA,8,10000,8,mpi,4.047
+DNA,8,10,12,mpi,0.019
+DNA,8,100,12,mpi,0.067
+DNA,8,10000,12,mpi,2.975
+DNA,12,10,1,seq,0.03
+DNA,12,100,1,seq,0.176
+DNA,12,10000,1,seq,11.336
+DNA,12,10,2,mpi,0.046
+DNA,12,100,2,mpi,0.492
+DNA,12,10000,2,mpi,10.976
+DNA,12,10,4,mpi,0.021
+DNA,12,100,4,mpi,0.084
+DNA,12,10000,4,mpi,6.485
+DNA,12,10,8,mpi,0.04
+DNA,12,100,8,mpi,0.104
+DNA,12,10000,8,mpi,7.454
+DNA,12,10,12,mpi,0.028
+DNA,12,100,12,mpi,0.065
+DNA,12,10000,12,mpi,4.328
+2D Point,2,10,1,seq,0.007
+2D Point,2,100,1,seq,0.013
+2D Point,2,10000,1,seq,0.574
+2D Point,2,10,2,mpi,0.026
+2D Point,2,100,2,mpi,0.037
+2D Point,2,10000,2,mpi,0.637
+2D Point,2,10,4,mpi,0.006
+2D Point,2,100,4,mpi,0.013
+2D Point,2,10000,4,mpi,0.6
+2D Point,2,10,8,mpi,0.007
+2D Point,2,100,8,mpi,0.008
+2D Point,2,10000,8,mpi,0.6
+2D Point,2,10,12,mpi,0.019
+2D Point,2,100,12,mpi,0.08
+2D Point,2,10000,12,mpi,0.594
+2D Point,4,10,1,seq,0.009
+2D Point,4,100,1,seq,0.038
+2D Point,4,10000,1,seq,2.955
+2D Point,4,10,2,mpi,0.036
+2D Point,4,100,2,mpi,0.045
+2D Point,4,10000,2,mpi,3.02
+2D Point,4,10,4,mpi,0
+2D Point,4,100,4,mpi,0.036
+2D Point,4,10000,4,mpi,2.847
+2D Point,4,10,8,mpi,0.005
+2D Point,4,100,8,mpi,0.04
+2D Point,4,10000,8,mpi,2.945
+2D Point,4,10,12,mpi,0.023
+2D Point,4,100,12,mpi,0.033
+2D Point,4,10000,12,mpi,3.8
+2D Point,8,10,1,seq,0.021
+2D Point,8,100,1,seq,0.164
+2D Point,8,10000,1,seq,14.592
+2D Point,8,10,2,mpi,0.02
+2D Point,8,100,2,mpi,0.153
+2D Point,8,10000,2,mpi,16.555
+2D Point,8,10,4,mpi,0.022
+2D Point,8,100,4,mpi,0.147
+2D Point,8,10000,4,mpi,14.069
+2D Point,8,10,8,mpi,0.024
+2D Point,8,100,8,mpi,0.155
+2D Point,8,10000,8,mpi,14.456
+2D Point,8,10,12,mpi,0.021
+2D Point,8,100,12,mpi,0.142
+2D Point,8,10000,12,mpi,18.283
+2D Point,12,10,1,seq,0.04
+2D Point,12,100,1,seq,0.337
+2D Point,12,10000,1,seq,33.681
+2D Point,12,10,2,mpi,0.082
+2D Point,12,100,2,mpi,0.317
+2D Point,12,10000,2,mpi,32.746
+2D Point,12,10,4,mpi,0.036
+2D Point,12,100,4,mpi,0.384
+2D Point,12,10000,4,mpi,32.7
+2D Point,12,10,8,mpi,0.045
+2D Point,12,100,8,mpi,0.355
+2D Point,12,10000,8,mpi,34.688
+2D Point,12,10,12,mpi,0.037
+2D Point,12,100,12,mpi,0.306
+2D Point,12,10000,12,mpi,34.425
