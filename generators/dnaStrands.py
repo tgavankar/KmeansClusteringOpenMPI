@@ -108,15 +108,11 @@ for i in range(0, numClusters):
     # compute the variance for this cluster
     variance = numpy.random.uniform(minClusterVar, maxClusterVar)
     cluster = centroids_radii[i]
-    print "Ori %s" % cluster
-    print "Var %s" % variance
     for j in range(0, numPoints):
         # generate a 2D point with specified variance
         # point is normally-distributed around centroids[i]
         distance = int(abs(numpy.random.normal(0, variance)))
         if distance > maxValue:
             distance = maxValue
-        print "New %s, %s" % (mutateString(cluster, distance), distance)
         # write the points out
         writer.writerow([mutateString(cluster, distance)])
-    print "*"*5
