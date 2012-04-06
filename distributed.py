@@ -190,7 +190,7 @@ def quickSelect(data, n):
 
 def kmeanpp(X, k, distance):
     """Perform K-Mean++ initial centroid selection algorithm."""
-    # Souce: http://yongsun.me/2008/10/k-means-and-k-means-with-python/
+    # Source: http://yongsun.me/2008/10/k-means-and-k-means-with-python/
     ntries = int(2 + math.log(k))
     n = len(X)
     centers = [X[random.randint(0, n)]]
