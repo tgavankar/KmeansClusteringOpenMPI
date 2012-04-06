@@ -1,0 +1,51 @@
+******************************
+********* How to Run *********
+******************************
+
+* graphPoints.py
+- Generates clustered 2D points.
+Run `python graphPoints.py -c <#> -p <#> -o <file>`
+    -c being the desired number of clusters
+    -p being the desired number of points per cluster
+    -o being the path to the desired output file
+    -v being the maximum coordinate value for points (optional)
+
+    
+* dnaStrands.py
+- Generates clustered DNA strands.
+Run `python dnaStrands.py -c <#> -p <#> -o <file>`
+    -c being the desired number of clusters
+    -p being the desired number of points per cluster
+    -o being the path to the desired output file
+    -v being the length of each DNA strand (optional, default=10)
+    
+* sequential.py
+- Runs sequential implementation of K-Means and performs profiling.
+Run `python sequential.py -k <#> -u <float#> -i <infile> -o <outfile>` for 2D
+Run `python sequential.py -t dna -k <#> -u <float#> -i <infile> -o <outfile>` for DNA
+    -k being the number of clusters
+    -u being the desired number of k-means iterations (usually 0.0001)
+    -i being the path to the input file
+    -o being the path to the output file
+    See report.pdf for output format
+    
+* distributed.py
+- Runs distributed OpenMPI implementation of K-Means and performs per-machine profiling.
+- Note: Ensure that your machies are set up correctly for OpenMPI and have mpi4py installed.
+Run `mpirun --machinefile <file> -np <#> python distributed.py -k <#> -u <float#> -i <infile> -o <outfile>`
+    --machinefile being the name of the newline-delineated OpenMPI cluster machine hostnames file
+    -np being the number of processors to parallelize accross
+    -k being the number of clusters
+    -u being the desired number of k-means iterations (usually 0.0001)
+    -i being the path to the input file
+    -o being the path to the output file
+    See report.pdf for output format
+    
+* generateData.sh
+- Shell script that generates many different cases of input data.
+
+* runSequential.sh
+- Shell script that runs all versions of generated data via sequential.py and saves cProfile outputs as well.
+
+* runDistributed.sh
+- Shell script that runs all versions of generated data via distributed.py and saves cProfile outputs as well.
