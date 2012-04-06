@@ -32,7 +32,8 @@ Run `python sequential.py -t dna -k <#> -u <float#> -i <infile> -o <outfile>` fo
 * distributed.py
 - Runs distributed OpenMPI implementation of K-Means and performs per-machine profiling.
 - Note: Ensure that your machies are set up correctly for OpenMPI and have mpi4py installed.
-Run `mpirun --machinefile <file> -np <#> python distributed.py -k <#> -u <float#> -i <infile> -o <outfile>`
+Run `mpirun --machinefile <file> -np <#> python distributed.py -k <#> -u <float#> -i <infile> -o <outfile>` for 2D
+Run `mpirun --machinefile <file> -np <#> python distributed.py -t dna -k <#> -u <float#> -i <infile> -o <outfile>` for DNA
     --machinefile being the name of the newline-delineated OpenMPI cluster machine hostnames file
     -np being the number of processors to parallelize accross
     -k being the number of clusters
