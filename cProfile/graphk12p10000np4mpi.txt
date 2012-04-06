@@ -1,168 +1,163 @@
-         3122184 function calls in 2.724 seconds
+         1702692 function calls in 28.360 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.019    0.019    2.724    2.724 <string>:1(<module>)
-        1    0.000    0.000    0.000    0.000 distributed.py:112(handleArgs)
-        3    0.324    0.108    0.385    0.128 distributed.py:147(quickSelect)
-        3    0.001    0.000    0.001    0.000 distributed.py:173(chunks)
-        1    0.378    0.378    2.706    2.706 distributed.py:181(main)
-    32763    0.009    0.000    0.011    0.000 distributed.py:30(add)
+        1    0.018    0.018   28.360   28.360 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 distributed.py:113(handleArgs)
+        2    0.002    0.001    0.002    0.001 distributed.py:200(chunks)
+        1    0.392    0.392   28.342   28.342 distributed.py:208(main)
+    26295    0.008    0.000    0.009    0.000 distributed.py:30(add)
         3    0.000    0.000    0.000    0.000 distributed.py:33(clear)
-        3    0.004    0.001    0.004    0.001 distributed.py:36(calcCentroid)
-   360000    0.588    0.000    0.861    0.000 distributed.py:9(euclideanDistance)
+        3    0.003    0.001    0.003    0.001 distributed.py:36(calcCentroid)
+   360000    0.577    0.000    0.776    0.000 distributed.py:9(euclideanDistance)
         4    0.000    0.000    0.000    0.000 getopt.py:187(do_shorts)
         4    0.000    0.000    0.000    0.000 getopt.py:202(short_has_arg)
         1    0.000    0.000    0.000    0.000 getopt.py:51(getopt)
-       79    0.000    0.000    0.000    0.000 random.py:272(choice)
         3    0.000    0.000    0.000    0.000 {isinstance}
-   390272    0.032    0.000    0.032    0.000 {len}
-   360000    0.044    0.000    0.044    0.000 {math.sqrt}
+   390018    0.035    0.000    0.035    0.000 {len}
+   360000    0.051    0.000    0.051    0.000 {math.sqrt}
         1    0.000    0.000    0.000    0.000 {method 'Get_rank' of 'mpi4py.MPI.Comm' objects}
         1    0.000    0.000    0.000    0.000 {method 'Get_size' of 'mpi4py.MPI.Comm' objects}
-  1078893    0.067    0.000    0.067    0.000 {method 'append' of 'list' objects}
-        4    0.562    0.141    0.562    0.141 {method 'bcast' of 'mpi4py.MPI.Comm' objects}
+    56299    0.005    0.000    0.005    0.000 {method 'append' of 'list' objects}
+        4   26.697    6.674   26.697    6.674 {method 'bcast' of 'mpi4py.MPI.Comm' objects}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
-        3    0.210    0.070    0.210    0.070 {method 'gather' of 'mpi4py.MPI.Comm' objects}
+        2    0.217    0.109    0.217    0.109 {method 'gather' of 'mpi4py.MPI.Comm' objects}
         3    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
-       79    0.000    0.000    0.000    0.000 {method 'random' of '_random.Random' objects}
-        3    0.238    0.079    0.238    0.079 {method 'scatter' of 'mpi4py.MPI.Comm' objects}
+        2    0.199    0.099    0.199    0.099 {method 'scatter' of 'mpi4py.MPI.Comm' objects}
     30000    0.005    0.000    0.005    0.000 {method 'setdefault' of 'dict' objects}
-   120000    0.034    0.000    0.034    0.000 {method 'split' of 'str' objects}
+   120000    0.035    0.000    0.035    0.000 {method 'split' of 'str' objects}
        12    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
-        1    0.000    0.000    0.000    0.000 {open}
-   390008    0.120    0.000    0.120    0.000 {range}
-       28    0.000    0.000    0.000    0.000 {round}
-   360006    0.091    0.000    0.091    0.000 {sum}
+        1    0.001    0.001    0.001    0.001 {open}
+        4    0.000    0.000    0.000    0.000 {range}
+       20    0.000    0.000    0.000    0.000 {round}
+   360006    0.117    0.000    0.117    0.000 {sum}
 
 
-         3056966 function calls in 2.730 seconds
+         1707612 function calls in 28.366 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.024    0.024    2.730    2.730 <string>:1(<module>)
-        1    0.000    0.000    0.000    0.000 distributed.py:112(handleArgs)
-        3    0.293    0.098    0.371    0.124 distributed.py:147(quickSelect)
-        3    0.003    0.001    0.003    0.001 distributed.py:173(chunks)
-        1    0.431    0.431    2.706    2.706 distributed.py:181(main)
-    26925    0.008    0.000    0.010    0.000 distributed.py:30(add)
+        1    0.024    0.024   28.366   28.366 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 distributed.py:113(handleArgs)
+        2    0.003    0.002    0.003    0.002 distributed.py:200(chunks)
+        1    0.459    0.459   28.342   28.342 distributed.py:208(main)
+    28755    0.008    0.000    0.011    0.000 distributed.py:30(add)
         3    0.000    0.000    0.000    0.000 distributed.py:33(clear)
         3    0.003    0.001    0.004    0.001 distributed.py:36(calcCentroid)
-   360000    0.624    0.000    0.917    0.000 distributed.py:9(euclideanDistance)
+   360000    0.623    0.000    0.823    0.000 distributed.py:9(euclideanDistance)
         4    0.000    0.000    0.000    0.000 getopt.py:187(do_shorts)
         4    0.000    0.000    0.000    0.000 getopt.py:202(short_has_arg)
         1    0.000    0.000    0.000    0.000 getopt.py:51(getopt)
-       68    0.000    0.000    0.000    0.000 random.py:272(choice)
         3    0.000    0.000    0.000    0.000 {isinstance}
-   390240    0.042    0.000    0.042    0.000 {len}
-   360000    0.056    0.000    0.056    0.000 {math.sqrt}
+   390018    0.039    0.000    0.039    0.000 {len}
+   360000    0.051    0.000    0.051    0.000 {math.sqrt}
         1    0.000    0.000    0.000    0.000 {method 'Get_rank' of 'mpi4py.MPI.Comm' objects}
         1    0.000    0.000    0.000    0.000 {method 'Get_size' of 'mpi4py.MPI.Comm' objects}
-  1019567    0.083    0.000    0.083    0.000 {method 'append' of 'list' objects}
-        4    0.597    0.149    0.597    0.149 {method 'bcast' of 'mpi4py.MPI.Comm' objects}
+    58759    0.006    0.000    0.006    0.000 {method 'append' of 'list' objects}
+        4   26.695    6.674   26.695    6.674 {method 'bcast' of 'mpi4py.MPI.Comm' objects}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
-        3    0.124    0.041    0.124    0.041 {method 'gather' of 'mpi4py.MPI.Comm' objects}
+        2    0.128    0.064    0.128    0.064 {method 'gather' of 'mpi4py.MPI.Comm' objects}
         3    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
-       68    0.000    0.000    0.000    0.000 {method 'random' of '_random.Random' objects}
-        3    0.186    0.062    0.186    0.062 {method 'scatter' of 'mpi4py.MPI.Comm' objects}
+        2    0.170    0.085    0.170    0.085 {method 'scatter' of 'mpi4py.MPI.Comm' objects}
     30000    0.005    0.000    0.005    0.000 {method 'setdefault' of 'dict' objects}
    120000    0.037    0.000    0.037    0.000 {method 'split' of 'str' objects}
        12    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
         1    0.001    0.001    0.001    0.001 {open}
-   390008    0.114    0.000    0.114    0.000 {range}
-       28    0.000    0.000    0.000    0.000 {round}
-   360006    0.097    0.000    0.097    0.000 {sum}
+        4    0.000    0.000    0.000    0.000 {range}
+       20    0.000    0.000    0.000    0.000 {round}
+   360006    0.114    0.000    0.114    0.000 {sum}
 
 
-         3028001 function calls in 2.730 seconds
+         1713800 function calls in 28.367 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.024    0.024    2.730    2.730 <string>:1(<module>)
-        1    0.000    0.000    0.000    0.000 distributed.py:112(handleArgs)
-        3    0.280    0.093    0.356    0.119 distributed.py:147(quickSelect)
-        3    0.003    0.001    0.003    0.001 distributed.py:173(chunks)
-        1    0.425    0.425    2.706    2.706 distributed.py:181(main)
-    30422    0.009    0.000    0.012    0.000 distributed.py:30(add)
+        1    0.025    0.025   28.367   28.367 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 distributed.py:113(handleArgs)
+        2    0.003    0.002    0.003    0.002 distributed.py:200(chunks)
+        1    0.457    0.457   28.342   28.342 distributed.py:208(main)
+    31849    0.010    0.000    0.012    0.000 distributed.py:30(add)
         3    0.000    0.000    0.000    0.000 distributed.py:33(clear)
         3    0.004    0.001    0.004    0.001 distributed.py:36(calcCentroid)
-   360000    0.607    0.000    0.897    0.000 distributed.py:9(euclideanDistance)
+   360000    0.614    0.000    0.811    0.000 distributed.py:9(euclideanDistance)
         4    0.000    0.000    0.000    0.000 getopt.py:187(do_shorts)
         4    0.000    0.000    0.000    0.000 getopt.py:202(short_has_arg)
         1    0.000    0.000    0.000    0.000 getopt.py:51(getopt)
-       57    0.000    0.000    0.000    0.000 random.py:272(choice)
         3    0.000    0.000    0.000    0.000 {isinstance}
-   390198    0.040    0.000    0.040    0.000 {len}
-   360000    0.056    0.000    0.056    0.000 {math.sqrt}
+   390018    0.038    0.000    0.038    0.000 {len}
+   360000    0.051    0.000    0.051    0.000 {math.sqrt}
         1    0.000    0.000    0.000    0.000 {method 'Get_rank' of 'mpi4py.MPI.Comm' objects}
         1    0.000    0.000    0.000    0.000 {method 'Get_size' of 'mpi4py.MPI.Comm' objects}
-   987169    0.082    0.000    0.082    0.000 {method 'append' of 'list' objects}
-        4    0.604    0.151    0.604    0.151 {method 'bcast' of 'mpi4py.MPI.Comm' objects}
+    61853    0.007    0.000    0.007    0.000 {method 'append' of 'list' objects}
+        4   26.676    6.669   26.676    6.669 {method 'bcast' of 'mpi4py.MPI.Comm' objects}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
-        3    0.149    0.050    0.149    0.050 {method 'gather' of 'mpi4py.MPI.Comm' objects}
+        2    0.152    0.076    0.152    0.076 {method 'gather' of 'mpi4py.MPI.Comm' objects}
         3    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
-       57    0.000    0.000    0.000    0.000 {method 'random' of '_random.Random' objects}
-        3    0.195    0.065    0.195    0.065 {method 'scatter' of 'mpi4py.MPI.Comm' objects}
+        2    0.176    0.088    0.176    0.088 {method 'scatter' of 'mpi4py.MPI.Comm' objects}
     30000    0.005    0.000    0.005    0.000 {method 'setdefault' of 'dict' objects}
    120000    0.037    0.000    0.037    0.000 {method 'split' of 'str' objects}
        12    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
         1    0.001    0.001    0.001    0.001 {open}
-   390008    0.113    0.000    0.113    0.000 {range}
-       28    0.000    0.000    0.000    0.000 {round}
-   360006    0.097    0.000    0.097    0.000 {sum}
+        4    0.000    0.000    0.000    0.000 {range}
+       20    0.000    0.000    0.000    0.000 {round}
+   360006    0.111    0.000    0.111    0.000 {sum}
 
 
-         3079396 function calls in 3.017 seconds
+         46310102 function calls in 28.808 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.093    0.093    3.017    3.017 <string>:1(<module>)
-        1    0.000    0.000    0.000    0.000 distributed.py:112(handleArgs)
-        3    0.243    0.081    0.291    0.097 distributed.py:147(quickSelect)
-        3    0.001    0.000    0.001    0.000 distributed.py:173(chunks)
-        1    0.499    0.499    2.925    2.925 distributed.py:181(main)
+        1    0.110    0.110   28.808   28.808 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 distributed.py:113(handleArgs)
+        1    1.481    1.481   26.162   26.162 distributed.py:174(kmeanpp)
+   119999    0.013    0.000    0.013    0.000 distributed.py:181(<lambda>)
    120012    0.010    0.000    0.010    0.000 distributed.py:19(point2str)
-        3    0.000    0.000    0.000    0.000 distributed.py:210(<lambda>)
-       37    0.003    0.000    0.003    0.000 distributed.py:242(<genexpr>)
-        3    0.000    0.000    0.003    0.001 distributed.py:242(<lambda>)
+  5279956    0.834    0.000    0.834    0.000 distributed.py:191(<lambda>)
+  5280044    4.455    0.000   18.153    0.000 distributed.py:192(<genexpr>)
+        2    0.001    0.001    0.001    0.001 distributed.py:200(chunks)
+        1    0.541    0.541   28.699   28.699 distributed.py:208(main)
        12    0.000    0.000    0.000    0.000 distributed.py:26(__init__)
-        3    0.000    0.000    0.000    0.000 distributed.py:265(<lambda>)
-    29890    0.009    0.000    0.011    0.000 distributed.py:30(add)
+       32    0.003    0.000    0.003    0.000 distributed.py:272(<genexpr>)
+        3    0.000    0.000    0.003    0.001 distributed.py:272(<lambda>)
+        3    0.000    0.000    0.000    0.000 distributed.py:295(<lambda>)
+    33101    0.009    0.000    0.011    0.000 distributed.py:30(add)
        15    0.000    0.000    0.000    0.000 distributed.py:33(clear)
        15    0.004    0.000    0.004    0.000 distributed.py:36(calcCentroid)
-   360012    0.630    0.000    0.920    0.000 distributed.py:9(euclideanDistance)
+  7080012   12.519    0.000   16.394    0.000 distributed.py:9(euclideanDistance)
         4    0.000    0.000    0.000    0.000 getopt.py:187(do_shorts)
         4    0.000    0.000    0.000    0.000 getopt.py:202(short_has_arg)
         1    0.000    0.000    0.000    0.000 getopt.py:51(getopt)
-       64    0.000    0.000    0.000    0.000 random.py:272(choice)
+        1    0.000    0.000    0.000    0.000 random.py:173(randrange)
+        1    0.000    0.000    0.000    0.000 random.py:237(randint)
         1    0.000    0.000    0.000    0.000 {_csv.writer}
        15    0.000    0.000    0.000    0.000 {isinstance}
-   390251    0.034    0.000    0.034    0.000 {len}
-   360012    0.050    0.000    0.050    0.000 {math.sqrt}
-        1    0.000    0.000    0.000    0.000 {max}
+  7275776    0.641    0.000    0.641    0.000 {len}
+        1    0.000    0.000    0.000    0.000 {math.log}
+  7080012    0.994    0.000    0.994    0.000 {math.sqrt}
+        2    0.000    0.000    0.000    0.000 {max}
         1    0.000    0.000    0.000    0.000 {method 'Get_rank' of 'mpi4py.MPI.Comm' objects}
         1    0.000    0.000    0.000    0.000 {method 'Get_size' of 'mpi4py.MPI.Comm' objects}
-   905905    0.062    0.000    0.062    0.000 {method 'append' of 'list' objects}
-        4    0.359    0.090    0.359    0.090 {method 'bcast' of 'mpi4py.MPI.Comm' objects}
+   183152    0.013    0.000    0.013    0.000 {method 'append' of 'list' objects}
+        4    0.346    0.086    0.346    0.086 {method 'bcast' of 'mpi4py.MPI.Comm' objects}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
-        3    0.482    0.161    0.482    0.161 {method 'gather' of 'mpi4py.MPI.Comm' objects}
-       71    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        2    0.484    0.242    0.484    0.242 {method 'gather' of 'mpi4py.MPI.Comm' objects}
+       61    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
         6    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
-       64    0.000    0.000    0.000    0.000 {method 'random' of '_random.Random' objects}
-        3    0.159    0.053    0.159    0.053 {method 'scatter' of 'mpi4py.MPI.Comm' objects}
+       45    0.000    0.000    0.000    0.000 {method 'random' of '_random.Random' objects}
+        2    0.141    0.070    0.141    0.070 {method 'scatter' of 'mpi4py.MPI.Comm' objects}
     30000    0.005    0.000    0.005    0.000 {method 'setdefault' of 'dict' objects}
-   120000    0.037    0.000    0.037    0.000 {method 'split' of 'str' objects}
+   120000    0.036    0.000    0.036    0.000 {method 'split' of 'str' objects}
        12    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
-     6426    0.090    0.000    0.090    0.000 {method 'writerow' of '_csv.writer' objects}
-        2    0.003    0.002    0.003    0.002 {open}
-   390033    0.117    0.000    0.117    0.000 {range}
-        3    0.001    0.000    0.004    0.001 {reduce}
-       28    0.000    0.000    0.000    0.000 {round}
-   366468    0.119    0.000    0.119    0.000 {sum}
-        1    0.008    0.008    0.008    0.008 {zip}
+    13808    0.144    0.000    0.144    0.000 {method 'writerow' of '_csv.writer' objects}
+  6600000    1.487    0.000    1.487    0.000 {min}
+        2    0.003    0.001    0.003    0.001 {open}
+       60    0.059    0.001    0.059    0.001 {range}
+       47    2.190    0.047   21.193    0.451 {reduce}
+       20    0.000    0.000    0.000    0.000 {round}
+  7093850    2.286    0.000    2.286    0.000 {sum}
 
 

@@ -1,0 +1,80 @@
+         29486559 function calls in 16.921 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 __future__.py:48(<module>)
+        1    0.000    0.000    0.000    0.000 __future__.py:74(_Feature)
+        7    0.000    0.000    0.000    0.000 __future__.py:75(__init__)
+        1    0.000    0.000    0.000    0.000 csv.py:123(DictWriter)
+        1    0.000    0.000    0.000    0.000 csv.py:162(Sniffer)
+        1    0.000    0.000    0.000    0.000 csv.py:26(Dialect)
+        1    0.000    0.000    0.000    0.000 csv.py:4(<module>)
+        1    0.000    0.000    0.000    0.000 csv.py:57(excel)
+        1    0.000    0.000    0.000    0.000 csv.py:67(excel_tab)
+        1    0.000    0.000    0.000    0.000 csv.py:73(DictReader)
+        1    0.000    0.000    0.000    0.000 getopt.py:15(<module>)
+        4    0.000    0.000    0.000    0.000 getopt.py:187(do_shorts)
+        4    0.000    0.000    0.000    0.000 getopt.py:202(short_has_arg)
+        1    0.000    0.000    0.000    0.000 getopt.py:38(GetoptError)
+        1    0.000    0.000    0.000    0.000 getopt.py:51(getopt)
+        1    0.002    0.002    0.002    0.002 hashlib.py:55(<module>)
+        6    0.000    0.000    0.000    0.000 hashlib.py:94(__get_openssl_constructor)
+        1    0.000    0.000    0.000    0.000 os.py:743(urandom)
+        1    0.000    0.000    0.000    0.000 random.py:100(seed)
+        1    0.000    0.000    0.000    0.000 random.py:173(randrange)
+        1    0.000    0.000    0.000    0.000 random.py:237(randint)
+        1    0.001    0.001    0.002    0.002 random.py:40(<module>)
+        1    0.000    0.000    0.000    0.000 random.py:653(WichmannHill)
+        1    0.000    0.000    0.000    0.000 random.py:72(Random)
+        1    0.000    0.000    0.000    0.000 random.py:803(SystemRandom)
+        1    0.000    0.000    0.000    0.000 random.py:91(__init__)
+        1    0.048    0.048   16.921   16.921 sequential.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 sequential.py:110(handleArgs)
+        1    0.723    0.723   14.429   14.429 sequential.py:145(kmeanpp)
+    59999    0.006    0.000    0.006    0.000 sequential.py:152(<lambda>)
+  2639956    0.450    0.000    0.450    0.000 sequential.py:162(<lambda>)
+  2640044    2.409    0.000   10.091    0.000 sequential.py:163(<genexpr>)
+    60012    0.005    0.000    0.005    0.000 sequential.py:18(point2str)
+        1    0.530    0.530   16.870   16.870 sequential.py:198(main)
+        1    0.000    0.000    0.000    0.000 sequential.py:24(Cluster)
+       12    0.000    0.000    0.000    0.000 sequential.py:25(__init__)
+    60000    0.026    0.000    0.033    0.000 sequential.py:29(add)
+       12    0.000    0.000    0.000    0.000 sequential.py:32(clear)
+       24    0.007    0.000    0.008    0.000 sequential.py:35(calcCentroid)
+  4080012    7.301    0.000   10.592    0.000 sequential.py:8(euclideanDistance)
+        2    0.000    0.000    0.000    0.000 {_csv.register_dialect}
+        1    0.000    0.000    0.000    0.000 {_csv.writer}
+        1    0.000    0.000    0.000    0.000 {_hashlib.openssl_md5}
+        1    0.000    0.000    0.000    0.000 {_hashlib.openssl_sha1}
+        1    0.000    0.000    0.000    0.000 {_hashlib.openssl_sha224}
+        1    0.000    0.000    0.000    0.000 {_hashlib.openssl_sha256}
+        1    0.000    0.000    0.000    0.000 {_hashlib.openssl_sha384}
+        1    0.000    0.000    0.000    0.000 {_hashlib.openssl_sha512}
+        1    0.000    0.000    0.000    0.000 {binascii.hexlify}
+        1    0.000    0.000    0.000    0.000 {function seed at 0x7fb57001be60}
+        6    0.000    0.000    0.000    0.000 {getattr}
+        6    0.000    0.000    0.000    0.000 {globals}
+       24    0.000    0.000    0.000    0.000 {isinstance}
+  4205207    0.386    0.000    0.386    0.000 {len}
+        1    0.000    0.000    0.000    0.000 {math.exp}
+        3    0.000    0.000    0.000    0.000 {math.log}
+  4080013    0.487    0.000    0.487    0.000 {math.sqrt}
+        2    0.000    0.000    0.000    0.000 {max}
+   120051    0.011    0.000    0.011    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+       45    0.000    0.000    0.000    0.000 {method 'random' of '_random.Random' objects}
+        1    0.000    0.000    0.000    0.000 {method 'setter' of 'property' objects}
+    60000    0.017    0.000    0.017    0.000 {method 'split' of 'str' objects}
+       12    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+    10425    0.076    0.000    0.076    0.000 {method 'writerow' of '_csv.writer' objects}
+  3300000    0.734    0.000    0.734    0.000 {min}
+        2    0.001    0.001    0.001    0.001 {open}
+        1    0.000    0.000    0.000    0.000 {posix.close}
+        1    0.000    0.000    0.000    0.000 {posix.open}
+        1    0.000    0.000    0.000    0.000 {posix.read}
+  4080097    1.340    0.000    1.340    0.000 {range}
+       45    1.216    0.027   11.763    0.261 {reduce}
+  4090485    1.143    0.000    1.143    0.000 {sum}
+
+

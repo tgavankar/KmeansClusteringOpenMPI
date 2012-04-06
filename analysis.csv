@@ -1,121 +1,140 @@
-Data Type,k (clusters),Points per Cluster,Number of Processors,Implementation Type,Runtime (s)
-DNA,2,10,1,seq,0.006
-DNA,2,100,1,seq,0.013
-DNA,2,10000,1,seq,0.42
-DNA,2,10,2,mpi,0.02
-DNA,2,100,2,mpi,0.03
-DNA,2,10000,2,mpi,0.538
-DNA,2,10,4,mpi,0.007
-DNA,2,100,4,mpi,0.015
-DNA,2,10000,4,mpi,0.443
-DNA,2,10,8,mpi,0.009
-DNA,2,100,8,mpi,0.024
-DNA,2,10000,8,mpi,0.357
-DNA,2,10,12,mpi,0.013
-DNA,2,100,12,mpi,0.022
-DNA,2,10000,12,mpi,0.672
-DNA,4,10,1,seq,0.007
-DNA,4,100,1,seq,0.018
-DNA,4,10000,1,seq,1.132
-DNA,4,10,2,mpi,0.015
-DNA,4,100,2,mpi,0.033
-DNA,4,10000,2,mpi,1.244
-DNA,4,10,4,mpi,0.008
-DNA,4,100,4,mpi,0.018
-DNA,4,10000,4,mpi,2.099
-DNA,4,10,8,mpi,0.007
-DNA,4,100,8,mpi,0.027
-DNA,4,10000,8,mpi,1.198
-DNA,4,10,12,mpi,0.014
-DNA,4,100,12,mpi,0.022
-DNA,4,10000,12,mpi,4.629
-DNA,8,10,1,seq,0.012
-DNA,8,100,1,seq,0.134
-DNA,8,10000,1,seq,5.748
-DNA,8,10,2,mpi,0.021
-DNA,8,100,2,mpi,0.12
-DNA,8,10000,2,mpi,5.33
-DNA,8,10,4,mpi,0.011
-DNA,8,100,4,mpi,0.075
-DNA,8,10000,4,mpi,3.532
-DNA,8,10,8,mpi,0.022
-DNA,8,100,8,mpi,0.098
-DNA,8,10000,8,mpi,4.047
-DNA,8,10,12,mpi,0.019
-DNA,8,100,12,mpi,0.067
-DNA,8,10000,12,mpi,2.975
-DNA,12,10,1,seq,0.03
-DNA,12,100,1,seq,0.176
-DNA,12,10000,1,seq,11.336
-DNA,12,10,2,mpi,0.046
-DNA,12,100,2,mpi,0.492
-DNA,12,10000,2,mpi,10.976
-DNA,12,10,4,mpi,0.021
-DNA,12,100,4,mpi,0.084
-DNA,12,10000,4,mpi,6.485
-DNA,12,10,8,mpi,0.04
-DNA,12,100,8,mpi,0.104
-DNA,12,10000,8,mpi,7.454
-DNA,12,10,12,mpi,0.028
-DNA,12,100,12,mpi,0.065
-DNA,12,10000,12,mpi,4.328
-2D Point,2,10,1,seq,0.007
-2D Point,2,100,1,seq,0.013
-2D Point,2,10000,1,seq,0.574
-2D Point,2,10,2,mpi,0.026
-2D Point,2,100,2,mpi,0.037
-2D Point,2,10000,2,mpi,0.637
-2D Point,2,10,4,mpi,0.006
-2D Point,2,100,4,mpi,0.013
-2D Point,2,10000,4,mpi,0.6
-2D Point,2,10,8,mpi,0.007
-2D Point,2,100,8,mpi,0.008
-2D Point,2,10000,8,mpi,0.6
-2D Point,2,10,12,mpi,0.019
-2D Point,2,100,12,mpi,0.08
-2D Point,2,10000,12,mpi,0.594
-2D Point,4,10,1,seq,0.009
-2D Point,4,100,1,seq,0.038
-2D Point,4,10000,1,seq,2.955
-2D Point,4,10,2,mpi,0.036
-2D Point,4,100,2,mpi,0.045
-2D Point,4,10000,2,mpi,3.02
-2D Point,4,10,4,mpi,0
-2D Point,4,100,4,mpi,0.036
-2D Point,4,10000,4,mpi,2.847
-2D Point,4,10,8,mpi,0.005
-2D Point,4,100,8,mpi,0.04
-2D Point,4,10000,8,mpi,2.945
-2D Point,4,10,12,mpi,0.023
-2D Point,4,100,12,mpi,0.033
-2D Point,4,10000,12,mpi,3.8
-2D Point,8,10,1,seq,0.021
-2D Point,8,100,1,seq,0.164
-2D Point,8,10000,1,seq,14.592
-2D Point,8,10,2,mpi,0.02
-2D Point,8,100,2,mpi,0.153
-2D Point,8,10000,2,mpi,16.555
-2D Point,8,10,4,mpi,0.022
-2D Point,8,100,4,mpi,0.147
-2D Point,8,10000,4,mpi,14.069
-2D Point,8,10,8,mpi,0.024
-2D Point,8,100,8,mpi,0.155
-2D Point,8,10000,8,mpi,14.456
-2D Point,8,10,12,mpi,0.021
-2D Point,8,100,12,mpi,0.142
-2D Point,8,10000,12,mpi,18.283
-2D Point,12,10,1,seq,0.04
-2D Point,12,100,1,seq,0.337
-2D Point,12,10000,1,seq,33.681
-2D Point,12,10,2,mpi,0.082
-2D Point,12,100,2,mpi,0.317
-2D Point,12,10000,2,mpi,32.746
-2D Point,12,10,4,mpi,0.036
-2D Point,12,100,4,mpi,0.384
-2D Point,12,10000,4,mpi,32.7
-2D Point,12,10,8,mpi,0.045
-2D Point,12,100,8,mpi,0.355
-2D Point,12,10000,8,mpi,34.688
-2D Point,12,10,12,mpi,0.037
-2D Point,12,100,12,mpi,0.306
-2D Point,12,10000,12,mpi,34.425
+dnak,12,1000,0,seq,0.221
+dnak,12,100,0,seq,0.064
+dnak,12,10,0,seq,0.125
+dnak,12,500,0,seq,0.246
+dnak,25,1000,0,seq,0.183
+dnak,25,100,0,seq,0.233
+dnak,25,10,0,seq,0.215
+dnak,25,500,0,seq,0.229
+dnak,2,1000,0,seq,0.687
+dnak,2,100,0,seq,0.083
+dnak,2,10,0,seq,0.012
+dnak,2,500,0,seq,0.220
+dnak,4,1000,0,seq,1.881
+dnak,4,100,0,seq,0.205
+dnak,4,10,0,seq,0.020
+dnak,4,500,0,seq,0.600
+dnak,50,1000,0,seq,0.266
+dnak,50,100,0,seq,0.219
+dnak,50,10,0,seq,0.242
+dnak,50,500,0,seq,0.233
+dnak,8,1000,0,seq,0.272
+dnak,8,100,0,seq,0.107
+dnak,8,10,0,seq,0.116
+dnak,8,500,0,seq,1.224
+graphk,12,10000,12,mpi,34.046
+graphk,12,10000,2,mpi,29.821
+graphk,12,10000,4,mpi,28.808
+graphk,12,10000,8,mpi,28.744
+graphk,12,1000,0,seq,33.442
+graphk,12,1000,12,mpi,3.109
+graphk,12,1000,2,mpi,2.997
+graphk,12,1000,4,mpi,2.841
+graphk,12,1000,8,mpi,2.855
+graphk,12,100,0,seq,3.306
+graphk,12,100,12,mpi,0.301
+graphk,12,100,2,mpi,0.315
+graphk,12,100,4,mpi,0.314
+graphk,12,100,8,mpi,0.298
+graphk,12,10,0,seq,0.340
+graphk,12,5000,12,mpi,15.082
+graphk,12,5000,2,mpi,18.027
+graphk,12,5000,4,mpi,14.227
+graphk,12,5000,8,mpi,14.106
+graphk,12,500,0,seq,16.921
+graphk,25,10000,12,mpi,156.765
+graphk,25,10000,2,mpi,157.113
+graphk,25,10000,4,mpi,151.017
+graphk,25,10000,8,mpi,156.480
+graphk,25,1000,0,seq,180.581
+graphk,25,1000,12,mpi,15.674
+graphk,25,1000,2,mpi,16.394
+graphk,25,1000,4,mpi,17.991
+graphk,25,1000,8,mpi,18.331
+graphk,25,100,0,seq,17.779
+graphk,25,100,12,mpi,1.499
+graphk,25,100,2,mpi,1.555
+graphk,25,100,4,mpi,1.527
+graphk,25,100,8,mpi,1.485
+graphk,25,10,0,seq,1.784
+graphk,25,5000,12,mpi,79.212
+graphk,25,5000,2,mpi,80.746
+graphk,25,5000,4,mpi,76.092
+graphk,25,5000,8,mpi,79.301
+graphk,25,500,0,seq,86.583
+graphk,2,10000,12,mpi,0.536
+graphk,2,10000,2,mpi,0.583
+graphk,2,10000,4,mpi,0.566
+graphk,2,10000,8,mpi,0.544
+graphk,2,1000,0,seq,0.579
+graphk,2,1000,12,mpi,0.063
+graphk,2,1000,2,mpi,0.065
+graphk,2,1000,4,mpi,0.062
+graphk,2,1000,8,mpi,0.062
+graphk,2,100,0,seq,0.067
+graphk,2,100,12,mpi,0.026
+graphk,2,100,2,mpi,0.014
+graphk,2,100,4,mpi,0.014
+graphk,2,100,8,mpi,0.021
+graphk,2,10,0,seq,0.017
+graphk,2,5000,12,mpi,0.266
+graphk,2,5000,2,mpi,0.292
+graphk,2,5000,4,mpi,0.283
+graphk,2,5000,8,mpi,0.282
+graphk,2,500,0,seq,0.316
+graphk,4,10000,12,mpi,8.583
+graphk,4,10000,2,mpi,2.687
+graphk,4,10000,4,mpi,2.573
+graphk,4,10000,8,mpi,2.509
+graphk,4,1000,0,seq,2.894
+graphk,4,1000,12,mpi,0.346
+graphk,4,1000,2,mpi,0.272
+graphk,4,1000,4,mpi,0.256
+graphk,4,1000,8,mpi,0.264
+graphk,4,100,0,seq,0.297
+graphk,4,100,12,mpi,0.036
+graphk,4,100,2,mpi,0.034
+graphk,4,100,4,mpi,0.034
+graphk,4,100,8,mpi,0.033
+graphk,4,10,0,seq,0.036
+graphk,4,5000,12,mpi,5.117
+graphk,4,5000,2,mpi,1.384
+graphk,4,5000,4,mpi,1.259
+graphk,4,5000,8,mpi,1.243
+graphk,4,500,0,seq,1.427
+graphk,50,10000,2,mpi,632.181
+graphk,50,10000,4,mpi,610.272
+graphk,50,10000,8,mpi,618.800
+graphk,50,1000,0,seq,698.820
+graphk,50,1000,2,mpi,63.390
+graphk,50,1000,4,mpi,60.906
+graphk,50,1000,8,mpi,60.672
+graphk,50,100,0,seq,72.475
+graphk,50,100,2,mpi,9.256
+graphk,50,100,4,mpi,6.069
+graphk,50,100,8,mpi,6.164
+graphk,50,10,0,seq,6.844
+graphk,50,5000,2,mpi,317.367
+graphk,50,5000,4,mpi,315.562
+graphk,50,5000,8,mpi,301.176
+graphk,50,500,0,seq,346.772
+graphk,8,10000,12,mpi,19.282
+graphk,8,10000,2,mpi,13.105
+graphk,8,10000,4,mpi,12.790
+graphk,8,10000,8,mpi,15.606
+graphk,8,1000,0,seq,14.357
+graphk,8,1000,12,mpi,1.299
+graphk,8,1000,2,mpi,1.258
+graphk,8,1000,4,mpi,1.240
+graphk,8,1000,8,mpi,4.233
+graphk,8,100,0,seq,1.513
+graphk,8,100,12,mpi,0.137
+graphk,8,100,2,mpi,0.141
+graphk,8,100,4,mpi,0.131
+graphk,8,100,8,mpi,0.133
+graphk,8,10,0,seq,0.159
+graphk,8,5000,12,mpi,6.565
+graphk,8,5000,2,mpi,6.636
+graphk,8,5000,4,mpi,6.406
+graphk,8,5000,8,mpi,6.089
+graphk,8,500,0,seq,7.252

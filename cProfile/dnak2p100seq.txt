@@ -1,4 +1,4 @@
-         6483 function calls in 0.014 seconds
+         4529 function calls in 0.012 seconds
 
    Ordered by: standard name
 
@@ -22,23 +22,23 @@
         6    0.000    0.000    0.000    0.000 hashlib.py:94(__get_openssl_constructor)
         1    0.000    0.000    0.000    0.000 os.py:743(urandom)
         1    0.000    0.000    0.000    0.000 random.py:100(seed)
-       12    0.000    0.000    0.000    0.000 random.py:272(choice)
-        1    0.001    0.001    0.002    0.002 random.py:40(<module>)
+        6    0.000    0.000    0.000    0.000 random.py:272(choice)
+        1    0.001    0.001    0.003    0.003 random.py:40(<module>)
         1    0.000    0.000    0.000    0.000 random.py:653(WichmannHill)
         1    0.000    0.000    0.000    0.000 random.py:72(Random)
         1    0.000    0.000    0.000    0.000 random.py:803(SystemRandom)
         1    0.000    0.000    0.000    0.000 random.py:91(__init__)
-        1    0.002    0.002    0.014    0.014 sequential.py:1(<module>)
-     1006    0.002    0.000    0.002    0.000 sequential.py:10(hammingDistance)
-        1    0.000    0.000    0.000    0.000 sequential.py:109(handleArgs)
-        2    0.000    0.000    0.001    0.000 sequential.py:144(quickSelect)
-        1    0.001    0.001    0.009    0.009 sequential.py:170(main)
-      202    0.000    0.000    0.001    0.000 sequential.py:20(dna2str)
-        1    0.000    0.000    0.000    0.000 sequential.py:23(Cluster)
-        2    0.000    0.000    0.000    0.000 sequential.py:24(__init__)
-      400    0.000    0.000    0.000    0.000 sequential.py:28(add)
-        4    0.000    0.000    0.000    0.000 sequential.py:31(clear)
-        6    0.003    0.000    0.003    0.000 sequential.py:34(calcCentroid)
+        1    0.003    0.003    0.012    0.012 sequential.py:1(<module>)
+      604    0.001    0.000    0.001    0.000 sequential.py:11(hammingDistance)
+        1    0.000    0.000    0.000    0.000 sequential.py:110(handleArgs)
+        2    0.000    0.000    0.000    0.000 sequential.py:171(quickSelect)
+        1    0.001    0.001    0.007    0.007 sequential.py:198(main)
+      202    0.000    0.000    0.001    0.000 sequential.py:21(dna2str)
+        1    0.000    0.000    0.000    0.000 sequential.py:24(Cluster)
+        2    0.000    0.000    0.000    0.000 sequential.py:25(__init__)
+      200    0.000    0.000    0.000    0.000 sequential.py:29(add)
+        2    0.000    0.000    0.000    0.000 sequential.py:32(clear)
+        4    0.001    0.000    0.001    0.000 sequential.py:35(calcCentroid)
         2    0.000    0.000    0.000    0.000 {_csv.register_dialect}
         1    0.000    0.000    0.000    0.000 {_csv.writer}
         1    0.000    0.000    0.000    0.000 {_hashlib.openssl_md5}
@@ -48,19 +48,19 @@
         1    0.000    0.000    0.000    0.000 {_hashlib.openssl_sha384}
         1    0.000    0.000    0.000    0.000 {_hashlib.openssl_sha512}
         1    0.000    0.000    0.000    0.000 {binascii.hexlify}
-        1    0.000    0.000    0.000    0.000 {function seed at 0x21bfde8}
+        1    0.000    0.000    0.000    0.000 {function seed at 0x7f5974e68e60}
         6    0.000    0.000    0.000    0.000 {getattr}
         6    0.000    0.000    0.000    0.000 {globals}
-       12    0.000    0.000    0.000    0.000 {isinstance}
-     1186    0.000    0.000    0.000    0.000 {len}
+        8    0.000    0.000    0.000    0.000 {isinstance}
+      929    0.000    0.000    0.000    0.000 {len}
         1    0.000    0.000    0.000    0.000 {math.exp}
         2    0.000    0.000    0.000    0.000 {math.log}
         1    0.000    0.000    0.000    0.000 {math.sqrt}
         2    0.000    0.000    0.000    0.000 {max}
-     1791    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+     1164    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
       202    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
-       12    0.000    0.000    0.000    0.000 {method 'random' of '_random.Random' objects}
+        6    0.000    0.000    0.000    0.000 {method 'random' of '_random.Random' objects}
         1    0.000    0.000    0.000    0.000 {method 'setter' of 'property' objects}
        15    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
       200    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
@@ -69,8 +69,7 @@
         1    0.000    0.000    0.000    0.000 {posix.close}
         1    0.000    0.000    0.000    0.000 {posix.open}
         1    0.000    0.000    0.000    0.000 {posix.read}
-     1145    0.000    0.000    0.000    0.000 {range}
+      698    0.000    0.000    0.000    0.000 {range}
       101    0.000    0.000    0.000    0.000 {sum}
-        1    0.000    0.000    0.000    0.000 {zip}
 
 
