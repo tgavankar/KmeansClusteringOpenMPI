@@ -44,9 +44,12 @@ Run `mpirun --machinefile <file> -np <#> python distributed.py -t dna -k <#> -u 
     
 * generateData.sh
 - Shell script that generates many different cases of input data.
+- Note: This is only for testing purposes. To run the actual tool, invoke them directly as outlined above.
 
 * runSequential.sh
 - Shell script that runs all versions of generated data via sequential.py and saves cProfile outputs as well.
+- Note: This is only for testing purposes. To run the actual tool, invoke them directly as outlined above.
 
 * runDistributed.sh
 - Shell script that runs all versions of generated data via distributed.py and saves cProfile outputs as well.
+- Note: This is only for testing purposes. To run the actual tool, invoke them directly as outlined above.
